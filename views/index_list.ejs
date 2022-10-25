@@ -1,0 +1,22 @@
+
+<!doctype html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<%- include('./partials/nav.ejs') %>
+<section>
+    <div class="container mt-5">
+        <% products.forEach((products)=>{ %>
+        <div class="row">
+          <ul class="list-group-horizontal text-center">
+            <li class="list-group-item"><%= products.name %></li>
+            <li class="list-group-item"><img src="<%= products.image %>" alt=""></li>
+            <li class="list-group-item"><%= products.catogory %></li>
+            <li class="list-group-item"><%= products.description %></li>
+            <li class="list-group-item"><button type="button" class="btn btn-lg btn-primary" disabled>Add to Cart</button></li>
+          </ul>
+        </div>
+        <% }) %>
+      </div>
+</section>
+<%- include('./partials/footer.ejs') %>
+</html>

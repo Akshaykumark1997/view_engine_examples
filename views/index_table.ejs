@@ -1,0 +1,33 @@
+
+<!doctype html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<%- include('./partials/nav.ejs') %>
+<section>
+    <div class="container mt-5">
+        <% products.forEach((products)=>{ %>
+        <table class="table mt-5 table-hover table-light">
+            <thead>
+            <tr>
+                <th class="col-3 col-md-3 col-lg-3 col-xl-1 text-center">Sl.No</th>
+                <th class="col-3 col-md-3 col-lg-3 col-xl-3 text-center">Image</th>
+                <th class="col-3 col-md-3 col-lg-3 col-xl-2 text-center">Name</th>
+                <th class="col-3 col-md-3 col-lg-3 col-xl-2 text-center">catogory</th>
+                <th class="col-3 col-md-3 col-lg-3 col-xl-6 text-center">description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr >
+                <th class="col-3 col-md-3 col-lg-3 col-xl-1 text-center">1</th>
+                <td class="col-3 col-md-3 col-lg-3 col-xl-3 text-center"><img src="<%= products.image %>" style="width: 50px;height:50px;" alt=""></td>
+                <td class="col-3 col-md-3 col-lg-3 col-xl-2 text-center"><%= products.name %></td>
+                <td class="col-3 col-md-3 col-lg-3 col-xl-2 text-center"><%= products.catogory %></td>
+                <td class="col-3 col-md-3 col-lg-3 col-xl-6 text-center"><%= products.description %></td>
+            </tr>
+            </tbody>
+        </table>
+        <% }) %>
+    </div>
+</section>
+<%- include('./partials/footer.ejs') %>
+</html>
