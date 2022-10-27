@@ -1,23 +1,22 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<%- include('./partials/head.ejs') %>
-<%- include('./partials/nav.ejs') %>
-<section>
-    <div class="container mt-5 ">
-        <div class="row  d-flex justify-content-evenly ">
+  <%- include('./partials/head.ejs') %> <%- include('./partials/nav.ejs') %>
+  <section>
+    <div class="container mt-5">
+      <div class="row d-flex justify-content-evenly">
         <% products.forEach ((products)=>{ %>
-        <div class="card m-3" style="width: 18rem;">
-            <img src="<%= products.image %>" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title"><%= products.name %></h5>
-                <p class="card-text"><%= products.catogary %></p>
-                <p class="card-text"><%= products.description %></p>
-                <a href="#" class="btn btn-primary">Add to Cart</a>
-            </div>
+        <div class="card m-3" style="width: 18rem">
+          <img src="<%= products.image %>" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title"><%= products.name %></h5>
+            <p class="card-text"><%= products.catogary %></p>
+            <p class="card-text"><%= products.description %></p>
+            <a href="#" class="btn btn-primary">Add to Cart</a>
+          </div>
         </div>
         <% }) %>
+      </div>
     </div>
-    </div>
-</section>
-<%- include('./partials/footer.ejs') %>
+  </section>
+  <%- include('./partials/footer.ejs') %>
 </html>
